@@ -6,10 +6,13 @@ class AppTheme {
   static const Color tertiary = Colors.indigoAccent;
 
   static final ThemeData darkTheme = ThemeData.dark().copyWith(
-    primaryColor: primary,
-    appBarTheme: const AppBarTheme(
-      elevation: 0,
-      color: primary,
-    ),
-  );
+      primaryColor: primary,
+      appBarTheme: const AppBarTheme(
+        elevation: 0,
+        color: primary,
+      ),
+      // TextButton Theme
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(foregroundColor: secondary),
+      ));
 }
