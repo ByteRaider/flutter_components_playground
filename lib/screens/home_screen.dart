@@ -1,4 +1,5 @@
 import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         ),
         separatorBuilder: (BuildContext context, int index) {
           return const Divider(
-            color: Colors.black26,
+            color: AppTheme.tertiary,
           );
         },
         itemCount: AppRoutes.menuOptions.length,
