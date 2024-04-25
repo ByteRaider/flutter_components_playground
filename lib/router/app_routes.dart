@@ -33,6 +33,12 @@ class AppRoutes {
         name: 'Alert',
         screen: const AlertScreen(),
         icon: Icons.alarm),
+    MenuOption(
+        // Card MenuOption
+        route: 'card',
+        name: 'Card',
+        screen: const CardScreen(),
+        icon: Icons.credit_card),
   ];
 
   // static Map<String, Widget Function(BuildContext)> routes = {
