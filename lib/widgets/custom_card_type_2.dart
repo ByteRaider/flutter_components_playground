@@ -1,6 +1,5 @@
 import 'package:fl_components/themes/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomCardType2 extends StatelessWidget {
   final String? name;
