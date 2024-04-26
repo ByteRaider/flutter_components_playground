@@ -4,9 +4,12 @@ import 'package:flutter/widgets.dart';
 
 class CustomCardType2 extends StatelessWidget {
   final String? name;
+  final String imageUrl;
+
   const CustomCardType2({
     super.key,
     this.name,
+    required this.imageUrl,
   });
 
   @override
@@ -17,19 +20,19 @@ class CustomCardType2 extends StatelessWidget {
         elevation: 15,
         shadowColor: AppTheme.primary.withOpacity(0.5),
         child: Column(children: [
-          const FadeInImage(
-            image: NetworkImage(
-                'https://wallup.net/wp-content/uploads/2016/01/102787-nature-mountain-river-landscape.jpg'),
-            placeholder: AssetImage('assets/img/loading.gif'),
+          FadeInImage(
+            image: NetworkImage(imageUrl),
+            placeholder: const AssetImage('assets/img/loading.gif'),
             width: double.infinity,
             height: 200,
             fit: BoxFit.cover,
           ),
-          Container(
-            alignment: AlignmentDirectional.centerEnd,
-            padding: const EdgeInsets.all(10.0),
-            child: const Text('No name'),
-          )
+          if (name != null)
+            Container(
+              alignment: AlignmentDirectional.centerEnd,
+              padding: const EdgeInsets.all(10.0),
+              child: Text(name ?? 'No image name provided'),
+            )
         ]));
   }
 }
