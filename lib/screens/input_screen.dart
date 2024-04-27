@@ -23,25 +23,39 @@ class InputScreen extends StatelessWidget {
                 child: Form(
                   key: myFormKey,
                   child: Column(children: [
-                    const CustomInputField(
+                    CustomInputField(
                       hintText: 'Name',
-                      labelText: 'Full Name',
-                      helperText: 'Name with at least 6 characters',
+                      labelText: 'First Name',
+                      helperText: 'Name with at least 3 characters',
                       keyboardType: TextInputType.name,
+                      formProperty: 'first_name',
+                      formValues: formValues,
+                    ),
+                    CustomInputField(
+                      hintText: 'Last Name',
+                      labelText: 'Last Name',
+                      helperText: 'Last Name with at least 3 characters',
+                      keyboardType: TextInputType.name,
+                      formProperty: 'last_name',
+                      formValues: formValues,
                     ),
                     const SizedBox(height: 30),
-                    const CustomInputField(
+                    CustomInputField(
                       hintText: 'Email address',
                       labelText: 'Email',
                       helperText: 'Enter your email',
                       keyboardType: TextInputType.emailAddress,
+                      formProperty: 'email',
+                      formValues: formValues,
                     ),
-                    const CustomInputField(
+                    CustomInputField(
                       hintText: 'Password',
                       labelText: 'Password',
                       helperText: 'Enter your password',
                       keyboardType: TextInputType.visiblePassword,
                       obscureText: true,
+                      formProperty: 'password',
+                      formValues: formValues,
                     ),
                     const SizedBox(height: 30),
                     ElevatedButton(
