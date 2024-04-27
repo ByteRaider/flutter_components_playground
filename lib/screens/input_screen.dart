@@ -17,8 +17,30 @@ class InputScreen extends StatelessWidget {
                       initialValue: '',
                       textCapitalization: TextCapitalization.words,
                       onChanged: (value) {
-                        print(value);
-                      }),
+                        print('value: $value');
+                      },
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'This is a required field';
+                        }
+                        return value.length < 3 ? 'Too short' : null;
+                      },
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      decoration: const InputDecoration(
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(20),
+                            bottomLeft: Radius.circular(20),
+                          ),
+                          borderSide: BorderSide(color: Colors.red),
+                        ),
+                        hintText: 'Enter your name',
+                        labelText: 'Name',
+                        helperText: 'At lease 3 letters',
+                        suffixIcon: Icon(Icons.person),
+                        prefixIcon: Icon(Icons.abc),
+                        icon: Icon(Icons.person_outline),
+                      ))
                 ]))));
   }
 }
