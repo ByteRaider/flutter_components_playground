@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 
 class AppRoutes {
   // AppRoutes
-  static const initialRoute = '/home';
+  static const initialRoute = 'home';
   static final menuOptions = <MenuOption>[
-    // menuOptions
-    MenuOption(
-      route: 'home',
-      name: 'Home Screen',
-      screen: const HomeScreen(),
-      icon: Icons.home,
-    ),
+    // MenuOption(
+    //   route: 'home',
+    //   name: 'Home Screen',
+    //   screen: const HomeScreen(),
+    //   icon: Icons.home,
+    // ),
     MenuOption(
       // List View 1 MenuOption
       route: 'list_view1',
