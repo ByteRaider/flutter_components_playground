@@ -1,6 +1,5 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class AnimatedScreen extends StatefulWidget {
   const AnimatedScreen({super.key});
@@ -16,7 +15,6 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
 
   void changeShape() {
-    print('Changing shape');
     final random = Random();
     _width = random.nextInt(300).toDouble() + 70;
     _height = random.nextInt(300).toDouble() + 70;
