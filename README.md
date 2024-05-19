@@ -1,4 +1,4 @@
-This repository is a collection of custom Flutter components designed to provide enhanced functionality and aesthetics for mobile app development. Dive into our playground to explore unique widgets and UI elements that can add a creative touch to your Flutter projects.
+This repository is a collection of custom Flutter components designed to showcase the enhanced functionality and aesthetics for mobile app development. Dive into our playground to explore unique widgets and UI elements that can add a creative touch to your Flutter projects.
 
 Features
 Custom Widgets: Discover a range of custom widgets created to enhance user interface design.
